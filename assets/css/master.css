@@ -1,0 +1,7 @@
+.fizzbuzz li {
+  opacity: 0;
+  transition: opacity 6s linear;
+}
+.fizzbuzz .fadein {
+  opacity: 1;
+}
