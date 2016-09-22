@@ -7,9 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- <link rel="icon" href="assets/img/favicon.ico"> -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/master.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/master.css"><link rel="stylesheet" type="text/css" href="assets/css/code-styles.css">
     <title>AlgorithmFun</title>
 
     <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,10 +20,41 @@
     <![endif]-->
   </head>
   <body>
-    <h1>FizzBuzz</h1>
-        <input type='text' id='fizzbuzz-input' name="maxNum" placeholder="please enter a number" maxlength="3">
-    <ul class='fizzbuzz'>
-    </ul>
+    <div class="container" id="fizzbuzz-container">
+        <div class="row">
+            <div class="col-md-12 algorithm-name">
+                <h1>Fizz Buzz</h1>
+                <input type='text' id='fizzbuzz-input' name="maxNum" placeholder="please enter a number" maxlength="3">
+            </div>
+            <div class="col-md-12 algorithm">
+                <pre>
+<span class="purple">function</span> <span class="blue"> fizzBuzz</span><span class="white">(</span><span class="orange">maxNum</span><span class="white">) {</span>
+    <span class="purple">for</span> <span class="white">(</span><span class="white">i</span><span class="aqua">=</span><span class="orange">1</span><span class="white">;</span><span class="white">i</span><span class="aqua"><</span><span class="aqua">=</span><span class="white">maxNum</span><span class="white">;</span><span class="white">i</span><span class="aqua">++</span><span class="white">) {</span>
+        <span class="purple">if</span> <span class="white">(</span><span class="purple">i</span> <span class="aqua">%</span> <span class="orange">15</span> <span class="aqua">===</span> <span class="orange">0</span><span class="white">) {</span>
+            <span class="white">console</span><span class="blue">.log</span><span class="white">(</span><span class="yellow">'Fizbuzz'</span><span class="white">);</span>
+        <span class="white">}</span> <span class="purple">else if</span> <span class="white">(</span><span class="purple">i</span> <span class="aqua">%</span> <span class="orange">5</span> <span class="aqua">===</span> <span class="orange">0</span><span class="white">) {</span>
+            <span class="white">console</span><span class="blue">.log</span><span class="white">(</span><span class="yellow">'Buzz'</span><span class="white">);</span>
+        <span class="white">}</span> <span class="purple">else if</span> <span class="white">(</span><span class="purple">i</span> <span class="aqua">%</span> <span class="orange">3</span> <span class="aqua">===</span> <span class="orange">0</span><span class="white">) {</span>
+            <span class="white">console</span><span class="blue">.log</span><span class="white">(</span><span class="yellow">'Fizz'</span><span class="white">);</span>
+        <span class="white">}</span> <span class="purple">else</span> <span class="white">{</span>
+            <span class="white">console</span><span class="blue">.log</span><span class="white">(</span><span class="white">i</span><span class="white">);</span>
+        <span class="white">}</span>
+    <span class="white">}</span>
+<span class="white">}</span>
+<span class="white">console</span><span class="blue">.log</span><span class="white">(</span><span class="orange">100</span><span class="white">);</span>
+                </pre>
+            </div>
+            <div id="results" class='col-md-12'>
+                <div class="display"></div>
+                <ul class='fizzbuzz'>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <!-- BOOTSTRAP CORE -->
     <script type="text/javascript" src="assets/js/jquery-3.1.0.min.js"></script>
@@ -30,3 +62,5 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
   </body>
 </html>
+
+
