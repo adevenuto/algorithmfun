@@ -4,6 +4,7 @@ $('body').on('keypress', 'input', function(e) {
   if (e.which < 48 || e.which > 57) {
     e.preventDefault();
   }
+
   if (e.which === 13 && inputVal!="") {
     function fizzBuzz() {
       setTimeout(function(){
@@ -12,13 +13,13 @@ $('body').on('keypress', 'input', function(e) {
     }
     function checkNum() {
       if (i % 15 === 0) {
-      $('.fizzbuzz').append('<li class="fadein">FizBuzz</li>');
+      $('.fizzbuzz').append('<li>FizBuzz</li>');
       } else if(i % 5 === 0) {
-        $('.fizzbuzz').append('<li class="fadein">Buzz</li>');
+        $('.fizzbuzz').append('<li>Buzz</li>');
       } else if(i % 3 === 0) {
-        $('.fizzbuzz').append('<li class="fadein">Fiz</li>');
+        $('.fizzbuzz').append('<li>Fiz</li>');
       } else {
-        $('.fizzbuzz').append('<li class="fadein">'+i+'</li>');
+        $('.fizzbuzz').append('<li>'+i+'</li>');
       }
       i++;
       if(i <= inputVal) {
@@ -27,6 +28,7 @@ $('body').on('keypress', 'input', function(e) {
     }
     var i = 1;
     fizzBuzz(inputVal);
+    console.log(i)
   }
 });
 $('#fizzbuzz-input').on('keyup', function(e){
