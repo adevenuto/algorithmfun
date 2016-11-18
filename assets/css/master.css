@@ -3,49 +3,49 @@ body,html,ul,h1,h2,h3,h4,h5,p {
   padding: 0;
   font-family: 'Inconsolata', monospace;
 }
-li {
-  list-style: none;
-  margin: 5px;
-  display: inline-block;
+html, body {
+  height: 100%;
 }
-#results {
-  width: 100%;
-  min-height: 100px;
-  /*border: 1px solid #000;*/
-  padding: 10px;
+#user-query {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#user-query h1 {
+  text-align: center;
+}
+#confine-text {
+  word-wrap: break-word;
+  background: #000;
   color: #fff;
-}
-#fizzbuzz-container {
-  border: 1px solid #000;
-  margin-top: 10px;
-  background: #00bfff;
-}
-input[type="text"] {
-  padding: 5px;
-  outline: 0;
-}
-.algorithm-name {
-  /*border: 1px solid #000;*/
   text-align: center;
-  padding: 5px;
 }
-.algorithm {
+#display {
   /*border: 1px solid #000;*/
-  height: auto;
-  padding: 10px;
-}
-.display {
-  text-align: center;
-  border-bottom: 2px solid #000;
-  margin-bottom: 10px;
-}
-.display:after {
-  content: "Results";
-  position: relative;
-  border: 1px solid #000;
   padding: 5px;
-  background: #fff;
-  color: #000;
-  top: 10px;
-  font-size: 1.3em;
 }
+.result {
+  opacity: 0;
+  height: 0;
+  transition-timing-function: cubic-bezier( -0.55, 0.265, 1.55);
+}
+.result.effect {
+  -webkit-animation: fade 5s;
+  animation: fade .5s;
+  opacity: 1;
+  height: 100px;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0; height: 0;}
+    to {opacity: 1; height: 100px;}
+} @keyframes fade {
+    from {opacity: 0; height: 0;}
+    to {opacity: 1; height: 100px;}
+}
+
+
+
+
+

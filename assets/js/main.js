@@ -1,42 +1,19 @@
-
-$('body').on('keypress', 'input', function(e) {
-  var inputVal = $('#fizzbuzz-input').val();
-  if (e.which < 48 || e.which > 57) {
-    e.preventDefault();
-  }
-
-  if (e.which === 13 && inputVal!="") {
-    function fizzBuzz() {
-      setTimeout(function(){
-        checkNum()
-      },50)
-    }
-    function checkNum() {
-      if (i % 15 === 0) {
-      $('.fizzbuzz').append('<li>FizBuzz</li>');
-      } else if(i % 5 === 0) {
-        $('.fizzbuzz').append('<li>Buzz</li>');
-      } else if(i % 3 === 0) {
-        $('.fizzbuzz').append('<li>Fiz</li>');
-      } else {
-        $('.fizzbuzz').append('<li>'+i+'</li>');
-      }
-      i++;
-      if(i <= inputVal) {
-        fizzBuzz()
-      }
-    }
-    var i = 1;
-    fizzBuzz(inputVal);
-    console.log(i)
+function appendChar(char) {
+  var display = $('#user-query-show');
+  display.append(char);
+}
+function removeChar() {
+  var display = $('#user-query-show');
+  var pop = display.text().slice(0,-1);
+  $('#user-query-show').html(pop);
+}
+$(document).on('keypress', function(e) {
+  if (e.which !== 13) {
+    appendChar(String.fromCharCode(e.which));
   }
 });
-$('#fizzbuzz-input').on('keyup', function(e){
-  if ($(this).val() == '') {
-    $('.fizzbuzz li').each(function(){
-      $(this).remove();
-    })
+$(document).on('keydown', function(e) {
+  if (e.which === 8) {
+    removeChar();
   }
-})
-
-
+});
